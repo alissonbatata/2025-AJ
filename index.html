@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agradecimento Especial</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Dancing Script', cursive;
             background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
             margin: 0;
             padding: 0;
@@ -41,22 +43,18 @@
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 30px;
             color: #d63384;
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 18px;
+            font-size: 22px;
             line-height: 1.6;
             margin-bottom: 15px;
         }
 
         strong {
-            color: #d63384;
-        }
-
-        .red-text {
             color: red;
         }
 
@@ -170,7 +168,7 @@
                     const char = text.charAt(i);
                     if (char === '[') {
                         const end = text.indexOf(']', i);
-                        const highlighted = `<span class="red-text">${text.slice(i + 1, end)}</span>`;
+                        const highlighted = `<strong>${text.slice(i + 1, end)}</strong>`;
                         element.innerHTML += highlighted;
                         i = end + 1;
                     } else {
